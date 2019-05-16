@@ -1,13 +1,18 @@
 {
   "name": "@bonbons/ng-electron",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.1558025787068",
   "main": "index.js",
   "repository": "https://github.com/ws-Bonbons/ng-electron.git",
   "author": "bigmogician<bigmogician@outlook.com>",
   "license": "MIT",
   "devDependencies": {
     "@bigmogician/publisher": "1.0.11",
+    "@types/fs-extra": "^7.0.0",
     "@types/node": "^12.0.2",
+    "@types/tar": "^4.0.0",
+    "chalk": "^2.4.2",
+    "fs-extra": "^8.0.1",
+    "tar": "^4.4.8",
     "ts-node": "7.0.0",
     "typescript": "^3.4.5"
   },

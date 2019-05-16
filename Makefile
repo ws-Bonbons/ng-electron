@@ -1,7 +1,8 @@
 build:
+	cd src & yarn
 	rm -rf package
 	mkdir package
-	cp README.md package/
+	npx ts-node ./configs/actions.ts
 
 rc: build
 	npx ts-node ./configs/pkg.rc.ts
