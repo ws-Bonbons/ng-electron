@@ -6,9 +6,12 @@
   "author": "bigmogician<bigmogician@outlook.com>",
   "license": "MIT",
   "devDependencies": {
-    "@bigmogician/publisher": "^1.0.10"
+    "@bigmogician/publisher": "1.0.11",
+    "@types/node": "^12.0.2",
+    "ts-node": "7.0.0",
+    "typescript": "^3.4.5"
   },
   "dependencies": {
-    "commander": "^2.20.0"
+    "commander": "2.20.0"
   }
 }
