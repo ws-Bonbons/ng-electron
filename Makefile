@@ -1,10 +1,9 @@
 build:
-	rm -rf package
-	mkdir package
-	npx ts-node ./configs/actions.ts
+	rm -rf dist
+	tsc
 
 rc: build
-	npx ts-node ./configs/pkg.rc.ts
+	TS_NODE_PROJECT=tsconfig.publish.json npx ts-node ./configs/pkg.rc.ts
 
 publish: build
-	npx ts-node ./configs/pkg.publish.ts
+	TS_NODE_PROJECT=tsconfig.publish.json npx ts-node ./configs/pkg.publish.ts

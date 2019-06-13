@@ -7,5 +7,5 @@
     "experimentalDecorators": true,
     "outDir": "./dist"
   },
-  "include": ["./index.ts"]
+  "include": ["./configs"]
 }
