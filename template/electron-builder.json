@@ -1,5 +1,5 @@
 {
-  "productName": "xiaokuaiji.electron",
+  "productName": "example-app.electron",
   "directories": {
     "output": "release/"
   },

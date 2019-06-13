@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "start-xiaokuaiji": {
+    "start-example-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -67,21 +67,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "start-xiaokuaiji:build"
+            "browserTarget": "start-example-app:build"
           },
           "configurations": {
             "dev": {
-              "browserTarget": "start-xiaokuaiji:build:dev"
+              "browserTarget": "start-example-app:build:dev"
             },
             "production": {
-              "browserTarget": "start-xiaokuaiji:build:production"
+              "browserTarget": "start-example-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "start-xiaokuaiji:build"
+            "browserTarget": "start-example-app:build"
           }
         },
         "test": {
@@ -113,7 +113,7 @@
       }
     }
   },
-  "defaultProject": "start-xiaokuaiji",
+  "defaultProject": "start-example-app",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

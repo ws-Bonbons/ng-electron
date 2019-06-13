@@ -1,2 +1,3 @@
-# xiaokuaiji.electron
+# example-app.electron
+
 RT
