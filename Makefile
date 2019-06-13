@@ -1,5 +1,4 @@
 build:
-	cd src & yarn
 	rm -rf package
 	mkdir package
 	npx ts-node ./configs/actions.ts

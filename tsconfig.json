@@ -2,7 +2,9 @@
   "compileOnSave": true,
   "compilerOptions": {
     "target": "es2016",
-    "module": "commonjs"
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
-  "exclude": ["node_modules", "src", "package"]
+  "include": ["./index.ts", "configs"]
 }
