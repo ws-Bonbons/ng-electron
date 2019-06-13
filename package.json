@@ -1,6 +1,6 @@
 {
   "name": "@bonbons/ng-electron",
-  "version": "1.0.0-rc.1560420672782",
+  "version": "1.0.0-rc.1560421769759",
   "main": "index.js",
   "types": "index.d.ts",
   "repository": "https://github.com/ws-Bonbons/ng-electron.git",

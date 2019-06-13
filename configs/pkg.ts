@@ -5,7 +5,7 @@ export const config: IConfig = {
   add: 0,
   useYarn: false,
   whiteSpace: "  ",
-  debug: true,
+  debug: false,
   outDist: "./dist",
   rootPath: ".",
   outTransform: json => ({

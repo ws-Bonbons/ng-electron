@@ -4,7 +4,7 @@ import * as fs from "fs";
 import * as rimraf from "rimraf";
 import { File } from "gulp-util";
 
-gulp.task("rename", () =>
+gulp.task("rename:gulpfile", () =>
   gulp
     .src(["./dist/gulpfile.cmd.js"])
     .pipe(
@@ -18,7 +18,7 @@ gulp.task("rename", () =>
     .pipe(gulp.dest("./dist"))
 );
 
-gulp.task("clear", () =>
+gulp.task("clear:gulpfile", () =>
   gulp
     .src(["./dist/gulpfile.cmd.js"])
     .pipe(
@@ -30,4 +30,6 @@ gulp.task("clear", () =>
     .pipe(gulp.dest("./dist"))
 );
 
-gulp.task("copy", gulp.series("rename", "clear"));
+gulp.task("copy:template", () => gulp.src(["./template/**/*.*"]).pipe(gulp.dest("./dist/template")));
+
+gulp.task("copy", gulp.series("rename:gulpfile", "clear:gulpfile", "copy:template"));
