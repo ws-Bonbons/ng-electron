@@ -4,13 +4,32 @@ import * as child_process from "child_process";
 
 cmd.name("create");
 cmd.description("ng-electron description.");
-// cmd.option("-C, --create [projectName]", "create a new ng-electron project.");
+cmd.option("-N, --name [projectName]", "create a new ng-electron project.");
+cmd.option("-O, --output [outputPath]", "create a new ng-electron project to path.");
 
-cmd.action(async (name: string, context: any) => {
+cmd.action(async (name: string, { name: projectName, output }: any) => {
   if (name !== "create") return;
   return new Promise((resolve, reject) => {
     child_process
-      .spawn("gulp default", [], {})
+      .spawn(
+        "npx",
+        [
+          "gulp",
+          "--gulpfile",
+          "node_modules/@bonbons/ng-electron/gulpfile.js",
+          "create",
+          "--name",
+          projectName || "my-project",
+          "--workroot",
+          process.cwd(),
+          "--output",
+          output || "."
+        ],
+        {
+          env: process.env,
+          stdio: ["pipe", process.stdout, process.stderr]
+        }
+      )
       .on("exit", (code, signal) => {
         if (code === 0) resolve(0);
         reject({ code, signal });

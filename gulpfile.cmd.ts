@@ -13,20 +13,17 @@ function getArg(name: string) {
 }
 
 const workFolder = getArg("--workroot") || getArg("-W");
-const projectName = getArg("--name") || getArg("-N");
-const outputPath = path.resolve(
-  workFolder || __dirname,
-  getArg("--output") || getArg("-O") || `./${projectName || "my-project"}`
-);
+const projectName = getArg("--name") || getArg("-N") || "my-project";
+const outputPath = path.resolve(workFolder || __dirname, getArg("--output") || getArg("-O") || `./${projectName}`);
 
 gulp.task("create", () =>
   gulp
     .src("./template/**/*.*")
     .pipe(
       through.obj(function(file: File, enc, cb) {
-        if (file.basename.endsWith("project.json")) {
+        if (file.basename.endsWith("package.json")) {
           const pkg = require(path.resolve(file.dirname, file.basename));
-          projectName && (pkg.name = projectName);
+          pkg.name = projectName;
           file.contents = new Buffer(JSON.stringify(pkg, null, "  "));
         }
         this.push(file);
