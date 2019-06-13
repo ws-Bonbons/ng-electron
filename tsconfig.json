@@ -4,7 +4,8 @@
     "target": "es2016",
     "module": "commonjs",
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "outDir": "./dist"
   },
   "include": ["./index.ts", "configs"]
 }
