@@ -6,8 +6,8 @@ export const config: IConfig = {
   useYarn: false,
   whiteSpace: "  ",
   debug: true,
-  outDist: "./package",
-  rootPath: "./src",
+  outDist: "./dist",
+  rootPath: ".",
   outTransform: json => ({
     ...json,
     main: "index.js",

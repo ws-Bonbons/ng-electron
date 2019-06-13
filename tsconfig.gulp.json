@@ -8,5 +8,5 @@
     "experimentalDecorators": true,
     "outDir": "./dist"
   },
-  "include": ["./configs"]
+  "include": ["./gulpfile.ts"]
 }

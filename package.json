@@ -1,19 +1,33 @@
 {
   "name": "@bonbons/ng-electron",
-  "version": "1.0.0-rc.1558025787068",
+  "version": "1.0.0-rc.1560420672782",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": "https://github.com/ws-Bonbons/ng-electron.git",
   "author": "bigmogician<bigmogician@outlook.com>",
   "license": "MIT",
+  "bin": {
+    "ng-electron": "bin/ng-electron"
+  },
+  "scripts": {
+    "copy": "TS_NODE_PROJECT=tsconfig.gulp.json gulp -r ts-node/register --gulpfile gulpfile.ts copy"
+  },
   "devDependencies": {
     "@bigmogician/publisher": "1.0.11",
-    "@types/node": "^12.0.2"
+    "@types/gulp": "^4.0.6",
+    "@types/gulp-util": "^3.0.34",
+    "@types/node": "^12.0.2",
+    "@types/through2": "^2.0.34",
+    "@types/rimraf": "^2.0.2"
   },
   "dependencies": {
     "chalk": "^2.4.2",
     "commander": "2.20.0",
     "gulp": "^4.0.2",
+    "gulp-util": "^3.0.8",
+    "rimraf": "^2.6.3",
     "ts-node": "7.0.0",
+    "tslib": "^1.10.0",
     "typescript": "^3.4.5"
   }
 }
